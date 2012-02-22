@@ -181,7 +181,7 @@ class Command(BaseCommand):
 
         # give some indication of progress
         if self.verbosity > 0:
-            print directory
+            print dirname
         # Skip directories we don't want to sync
         if dirname + '/' in self.FILTER_LIST:
             # prevent walk from processing subfiles/subdirs below the ignored one

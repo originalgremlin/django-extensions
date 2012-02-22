@@ -180,7 +180,7 @@ class Command(BaseCommand):
         bucket, key, bucket_name, root_dir = arg
 
         # Skip directories we don't want to sync
-        if os.path.basename(dirname) in self.FILTER_LIST:
+        if dirname + '/' in self.FILTER_LIST:
             # prevent walk from processing subfiles/subdirs below the ignored one
             del names[:]
             return
